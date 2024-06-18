@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TROCA FOTO</title>
+</head>
+<body>
+    <!-- MISSÃO
+    -> Estilizar a página toda para se adequar ao tema
+    -> Estilize os botões para condizer com o tema
+    -> centralize os elementos
+    -> Estilize os botões
+    -->
+    <style>
+        body{
+            background-image: url(img/background.webp);
+
+        }
+        .titulo{
+            display: flex;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: aqua;
+        }
+        .paragrafo{
+            display: flex;
+            justify-content: center;
+            color: magenta;
+            font-size: 20px;
+        }
+        .botoes{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-right: 25px;
+        }
+    </style>
+    <h1 class="titulo">TROCA FOTO</h1>
+    <div class="botoes">
+        <button  onclick="document.getElementById('imagem').src='img/tree1.webp'">VOLTA</button>
+        <img src="img/tree1.webp" id="imagem" width="300px" height="300px"/>
+    <button onclick="document.getElementById('imagem').src='img/tree2.png'">AVANÇA</button>
+    </div>
+</body>
+</html>

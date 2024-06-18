@@ -1,0 +1,38 @@
+
+/* TRATANDO IMAGENS NO CSS */
+.listareceitas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    margin-bottom: 80px;
+}
+
+
+/* TRATAMENTO DO RECEITABOX */
+.receitabox {
+    font-family: 'Courier New', Courier, monospace;
+    color: #1e7387;
+    font-size: 18px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 30px;
+
+}
+
+.receitabox a:hover{
+    opacity: 0.7;
+}
+.receitabox a:visited{
+    color: #1e7387;
+}
+
+a{
+    text-decoration: none;
+}
+
+.lista-imagem{
+    border-radius: 30px;
+}
+

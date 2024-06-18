@@ -1,0 +1,265 @@
+/* O CORPO COMPLETO DA PÁGINA */
+body{
+    background-color:  #eed2c5;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color:  #3e7f8d;    
+
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+
+}
+.menu{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-family: Curely, sans-serif;
+    font-size: 30px;
+    
+    
+}
+
+.menu a{
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px 15px 15px 15px;
+    color: whitesmoke;
+    height: 30px;
+    width: auto;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background-color: #f5dbd7;
+    color: #1e7387;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+}
+.fb:hover{
+    opacity: 0.7;
+}
+.ins:hover{
+    opacity: 0.7;
+}
+
+
+/* BARRA DE PESQUISA */
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.pesquisa input[type=text]{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid whitesmoke 3px;
+    background-color: #faf5f3;
+    color: #1e7387;
+}
+.pesquisa ::placeholder{
+    color: rgb(181, 181, 181)
+}
+
+.pesquisa input[type=submit]{
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #50838f;
+    color: whitesmoke;
+    border: #3e7f8d 3px solid;
+    background-image: url("../icons/icons8-search-50.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding:15px 15px 15px 15px;
+    height: 30px;
+    width: 30px;
+}
+
+.pesquisa input[type=submit]:hover{
+    opacity: 0.7;
+}
+.pesquisa input[type=text]:focus{
+    outline: none;
+}
+
+/* TEXTO H1 */
+.a99{
+    display: flex;
+    justify-content: center;
+}
+
+h1, h3{
+    color: #3e7f8d;
+}
+
+/* TRATAMENTO DO SLIDESHOW */
+.mySlides{display: none;}
+
+.slideshow-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: auto;
+
+}
+.slideimg{
+    border-radius: 20px;
+}
+
+
+.numbertext{
+    color: #3e7f8d;
+    font-size: 18px;
+    padding: 10px 10px;
+    position: absolute;
+    top: 0;
+}
+
+.text{
+    color: whitesmoke;
+    font-size: 22px;
+    padding: 10px 10px;
+    position: absolute;
+    bottom: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: grey;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+/* AQUI ESCREVO QUALQUER COISA */
+.texto-receitas{
+    font-family: Curely;
+    font-size: 40px;
+    color: #1e7387;
+    text-align: center;
+
+}
+
+
+/* RECEITAS BOX */
+.container-receitas{
+    display: flex;
+    justify-content: space-around;
+    /* NOVIDADE */
+    font-size: 25px;
+    color: #1e7387;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 80px;
+}
+.receita-imagem{
+    border-radius: 100%;
+}
+
+
+/* RODAPÉ PAGINA */
+.rodape{
+    height: 300px;
+    width: auto;
+    background-color: #1e7387;
+}
+
+/* TRATAMENTO DE RODAPÉ */
+.rodape-container{
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: medium;
+    margin-left: 30%;
+
+}
+
+.map h1, p{
+    color: beige;
+    display: flex;
+    align-content: center;
+}
+.rodape{
+    font-size: 22px;
+    color: beige;
+    display: flex;
+    justify-content: left;
+    
+}
+
+.rodape text{
+    margin-top: 250px;
+}
+.rodape a{
+    align-content: center;
+    font-size: 22px;
+    color: #f5dbd7;
+    text-decoration: none;
+}
+
+.sugestao{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 300px;
+}
+
+.churrasco img{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+.jantar img{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+.almoco img, a{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    text-decoration: none;
+}
+
+
+
+@keyframes fade{
+    from{opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+
+@import url('https://fonts.cdnfonts.com/css/curely');

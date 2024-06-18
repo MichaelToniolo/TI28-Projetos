@@ -1,0 +1,118 @@
+body{
+    background-image: url(img/planodefundo.jpg);
+    /* filter: blur(2px);   
+    -webkit-filter: blur(2px); */
+}
+
+#topo{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+#titulo{
+    margin-left: 40%;
+    float: left; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+#perfil{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+/* ELEMENTOS DO MENU */
+#menu{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 15px;
+    font-size: 22px;
+    border: 2px solid black;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#posts{
+    margin: 5px 5px 2px 5px ;
+    float: left;
+}
+#about{
+    margin: 5px 5px 2px 5px ;
+    float: right;
+}
+
+/* ELEMENTOS DA POSTAGEM */
+#lista-postagem{
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 200px;
+    float: left;
+}
+.textposts{
+    margin: 5px 10px 2px 20px ;
+    
+}
+
+#conteudo{
+    /* background-color: rgb(228, 228, 228); */
+    color: rgb(77, 77, 77);
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 250px;
+    padding-left: 10px;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+    .nav-list .nav-item {
+      display: inline-block;
+      display: inline;
+      zoom: 1; }
+      
+      .nav-list .nav-item a {
+        margin-top: 1em;
+        text-transform: lowercase;
+        font-size: 85%;
+        color: #7744cc; }
+        
+        .nav-list .nav-item a:hover, .nav-list .nav-item a:focus {
+          color: #a07cdb; }
+          pre code {
+            border: none;
+            background: transparent;
+            white-space: pre;
+            overflow: auto;
+            word-wrap: normal;
+            color: #525252; }
+            pre code span {
+              word-break: break-all; }
+
+              .share-buttons {
+                padding-top: 1em;
+                border-top: 1px solid #ddd;
+                padding-bottom: 1em;
+                border-bottom: 1px solid #ddd;
+                margin: 0.3em; }
+                .share-buttons span {
+                  margin: 0.3em; }
+                .share-buttons ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none; }
+                  .share-buttons ul li {
+                    display: inline-block;
+                    margin-right: 0.5em; }
+                    .share-buttons ul li span {
+                      display: none; }
+                      @media only screen and (min-width: 600px) {
+                        .share-buttons ul li span {
+                          display: inline;
+                          margin: 0.5em; } }
+              

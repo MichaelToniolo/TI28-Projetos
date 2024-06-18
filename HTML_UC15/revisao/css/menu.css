@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(5, 6, 6);
+}
+h1{
+    color: red;
+}
+
+.global{
+    width: auto;
+    height: 1000px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.container-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.container{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+   
+}
+
+.container2{
+    background-color: rgb(98, 0, 255);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+   
+}
+
+.container3{
+    background-color: rgb(81, 255, 0);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+   
+}
+
+.container h1{
+    color: rgb(193, 193, 192);
+}
+
+.container2 h1{
+    color: blue;
+}
+
+
+
+

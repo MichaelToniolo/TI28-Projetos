@@ -1,0 +1,42 @@
+table{
+    border-collapse: collapse;
+}
+img{
+    border-radius: 20px;
+    position: relative;
+}
+
+td,th{
+    border: 1px solid black;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+
+/* aplicando fonte personalizada */
+#skyrim {
+    font-size: x-large;
+    background-color: rgba(126, 126, 125, 0.987);
+    font-family: Balgruf;
+    
+}
+
+#fifa{
+    font-size: x-large;
+    font-family: EASPORTS15;
+
+}
+#hearthstone{
+    color: white;
+    font-size: x-large;
+    font-family:  Belwe-CondensedRoman;
+
+}
+
+@font-face{
+    font-family: Balgruf;
+    src: url(fonts/balgruf/Balgruf.otf);
+    font-family: EASPORTS15;
+    src: url(fonts/ea_font/EASPORTS15.ttf);
+    font-family: Belwe-Condensed Roman;
+    src: url(fonts/Belwe-CondensedRoman/Belwe-CondensedRoman.ttf);
+}

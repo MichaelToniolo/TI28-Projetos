@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CLICK</title>
+</head>
+<body>
+
+    <!-- TAREFA: ESTILIZAR ESTA PÁGINA FAZENDO AS SEGUINTES ALTERAÇÕES:
+    -> ALTERAÇÃO DA FONTE PARA OUTRO TIPO
+    -> COR DA FONTE AZUL CLARO
+    -> FUNDO ESCURO (PREFERÊNCIA QUALQUER DE COR)
+    -> ESTILIZAÇÃO DOS BOTÕES
+    -->
+    <style>
+        body{
+            background-color: black;
+
+        }
+        .titulo{
+            display: flex;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: aqua;
+        }
+        .paragrafo{
+            display: flex;
+            justify-content: center;
+            color: magenta;
+            font-size: 20px;
+        }
+        .botoes{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-right: 25px;
+        }
+
+    </style>
+
+    <h1 class="titulo">JS CLICK BUTTON</h1>
+    <!-- BOTÃO DE EVENTO JS -->
+    <div class="botoes">
+        <button class="botao1" id="botao1" onclick="document.getElementById('paragrafo').innerHTML ='OI CARA DE BOI'">NÃO CRICA AQUI</button>
+        <button class="botao1" id="botao1" onclick="document.getElementById('paragrafo').innerHTML =''">LIMPAR</button>
+    </div>
+
+
+    <br>
+    <br>
+    <p id="paragrafo" class="paragrafo"></p>
+
+
+</body>
+</html>
