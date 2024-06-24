@@ -1,4 +1,7 @@
 <?php
+$vlporcentagem = 10;
 $numero = 342;
-echo("12% de 342 é: ". (12 /100) * $numero);
+echo($vlporcentagem ."% de 342 é: ". ($vlporcentagem /100) * $numero);
+echo("<br>");
+echo($vlporcentagem . "% de Desconto sobre o valor de ". $numero -($numero * ($vlporcentagem /100)));
 ?>
