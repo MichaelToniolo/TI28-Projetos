@@ -6,6 +6,7 @@ body{
 .container-global{
     display: flex;
     justify-content: center;
+
 }
 
 .formulario{
@@ -26,5 +27,6 @@ body{
     height: 22px;
     border-radius: 20px;
     border: aliceblue 1px solid;
+    
 }
 
