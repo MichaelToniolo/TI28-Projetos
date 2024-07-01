@@ -11,10 +11,10 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     usu_status = '1'";
     // RETORNO DO BANCO
     $retorno = mysqli_query($link, $sql);
-    
-    while($tbl = mysqli_fetch_array($retorno)){
-        $contagem = $tbl[0];
-    }
+
+  
+
+    $contagem = mysqli_fetch_array($retorno) [0];
 
     // VERIFICA SE NATAN EXISTE
     if($contagem == 1){

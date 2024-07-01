@@ -24,9 +24,85 @@ body{
 }
 
 .formulario input{
+    display: flex;
+    justify-content: center;
     height: 22px;
     border-radius: 20px;
     border: aliceblue 1px solid;
-    
+
 }
 
+/* CSS DO HOME */
+.topo{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    height: 50px;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.topo label{
+    font-size: 30px;
+    color: #730202;
+}
+
+/* SAIR */
+.topo a{
+    width: 40px;
+    height: 40px;
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES */
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.menu a{
+    background-color: antiquewhite;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.menu img{
+    border-radius: 20px;
+}
+
+/* AJUSTANDO TABELAS */
+.container-listausuarios {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.lista{
+    background-color: rgb(47, 34, 21);
+    border-radius: 20px;
+    border-collapse: collapse;
+    width: 800px;
+    height: auto;
+    
+}
+td, tr, th{
+
+    color: whitesmoke;
+    border: whitesmoke 1px solid;
+    font-size: 20px;
+}
