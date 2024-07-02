@@ -1,5 +1,6 @@
 <?php
 include("conectadb.php");
+// include("header.php");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $login = $_POST['txtlogin'];
@@ -39,8 +40,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <title>CADASTRO DE USUARIO</title>
 </head>
 <body>
+<a href="home.php"><img src="icons/arrowhead-left-01.png" width="16" height="16"></a>
+
     <div class="container-global">
-        <a href="home.php" style="width: 50px; height: 50px; background-color: blue;">VOLTAR</a>
+        
         <form class="formulario" action="usuario-cadastro.php" method="post">
 
             <label>LOGIN</label>

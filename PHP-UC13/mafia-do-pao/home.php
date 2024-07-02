@@ -1,3 +1,7 @@
+<?php
+// include ("header.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,11 +12,12 @@
 </head>
 <body>
     <div class="container-home">
+    <!-- TOPO SEM MOBILE -->
         <div class="topo">
             <label>Bem Vindo</label>
             <a href="logout.php">Sair</a>
         </div>
-
+  
         <!-- BOTÕES DE MENU -->
          <div class="menu">
             <a href="usuario-cadastro.php">CADASTRAR USUARIOS</a>

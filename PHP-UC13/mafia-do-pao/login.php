@@ -39,17 +39,19 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 </head>
 <body>
     <div class="container-global">
-        <form class="formulario" action="login.php" method="post">
-            <img src="img/logo.jfif" width=100px height=100px>
+    
+
+    <form class="formulario" action="login.php" method="post">
+    <img src="img/logo.jfif" width="50" height="50">
             <label>LOGIN</label>
-            <input type="text" name="txtlogin" required>
+            <input type="text" name="txtlogin" placeholder="Digite seu login" required>
             <br>
             <label>SENHA</label>
-            <input type="password" name="txtsenha" required>
+            <input type="password" name="txtsenha" placeholder="Digite sua senha" required>
             <br>
             <br>
             <input type="submit" value="ACESSAR">
-        </form>
+    </form>
 
     </div>
     

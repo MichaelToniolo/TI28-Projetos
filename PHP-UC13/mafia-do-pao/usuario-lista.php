@@ -1,5 +1,6 @@
 <?php
 include('conectadb.php');
+// include('header.php');
 
 // CONSULTA USUARIOS CADASTRADOS
 $sql = "SELECT usu_login, usu_email, usu_status, usu_id 
@@ -20,6 +21,8 @@ $status = '1';
     <title>LISTA DE USUARIOS</title>
 </head>
 <body>
+<a href="home.php"><img src="icons/arrowhead-left-01.png" width="16" height="16"></a>
+
     <div class="container-listausuarios">
         <!-- FAZER DEPOIS DO ROLÊ -->
         <form>
