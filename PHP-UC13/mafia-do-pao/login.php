@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include("conectadb.php");
 
 if($_SERVER['REQUEST_METHOD']== 'POST'){
@@ -12,16 +14,22 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     // RETORNO DO BANCO
     $retorno = mysqli_query($link, $sql);
 
-  
-
     $contagem = mysqli_fetch_array($retorno) [0];
 
     // VERIFICA SE NATAN EXISTE
     if($contagem == 1){
-        echo"<script>window.location.href='home.php';</script>";
+        $sql = "SELECT usu_id, usu_login FROM tb_usuarios
+        WHERE usu_login = '$login'AND usu_senha = '$senha'";
+        $retorno = mysqli_query($link, $sql);
+        //RETORNANDO O NOME DO NATAN + ID DELE
+        while($tbl = mysqli_fetch_array($retorno)){
+            $_SESSION['idusuario'] = $tbl[0];
+            $_SESSION['nomeusuario'] = $tbl[1];
+        }
+        echo"<script>window.location.href='backoffice.php';</script>";
     }
     else{
-        echo"<script>window.alert('USUARIO OU SENHA INCORRETOS');</script>";
+        // echo"<script>window.alert('USUARIO OU SENHA INCORRETOS');</script>";
     }
 
 }
@@ -42,16 +50,16 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     
 
     <form class="formulario" action="login.php" method="post">
-    <img src="img/logo.jfif" width="50" height="50">
-            <label>LOGIN</label>
-            <input type="text" name="txtlogin" placeholder="Digite seu login" required>
-            <br>
-            <label>SENHA</label>
-            <input type="password" name="txtsenha" placeholder="Digite sua senha" required>
-            <br>
-            <br>
-            <input type="submit" value="ACESSAR">
-    </form>
+        <img src="img/logo.jfif" width="50" height="50">
+                <label>LOGIN</label>
+                <input type="text" name="txtlogin" placeholder="Digite seu login" required>
+                <br>
+                <label>SENHA</label>
+                <input type="password" name="txtsenha" placeholder="Digite sua senha" required>
+                <br>
+                <br>
+                <input type="submit" value="ACESSAR">
+        </form>
 
     </div>
     

@@ -21,7 +21,7 @@ $status = '1';
     <title>LISTA DE USUARIOS</title>
 </head>
 <body>
-<a href="home.php"><img src="icons/arrowhead-left-01.png" width="16" height="16"></a>
+<a href="backoffice.php"><img src="icons/Navigation-left-01-256.png" width="25" height="25"></a>
 
     <div class="container-listausuarios">
         <!-- FAZER DEPOIS DO ROLÊ -->

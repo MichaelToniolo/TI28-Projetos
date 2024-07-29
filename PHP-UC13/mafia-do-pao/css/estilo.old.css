@@ -1,0 +1,194 @@
+body{
+    background-color: #260101;
+}
+
+/* CONTAINER GLOBAL */
+.container-global{
+    display: flex;
+    justify-content: center;
+
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    width: 300px;
+    height: 300px;
+    background-color: #f2b705;
+    border-radius: 20px;
+    color: black;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.formulario input{
+    display: flex;
+    justify-content: center;
+    height: 22px;
+    border-radius: 20px;
+    border: aliceblue 1px solid;
+
+}
+.formulario img{
+    margin-left: 23%;
+    margin: 20px 0px 20px 23%
+}
+
+
+/* CSS DO HOME */
+
+.topnav{
+    display:  none;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2b705;
+    height: 50px;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 0px 20px 0px;
+}
+
+.topo label{
+    font-size: 30px;
+    color: #260101;
+}
+
+/* SAIR */
+.topo a{
+    width: 40px;
+    height: 40px;
+    
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES DO MENU*/
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu a{
+    background-color: #f2b705;
+    width: 300px;
+    height: 300px;
+    margin: 30px 15px 30px 15px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.menu img{
+    border-radius: 20px;
+}
+
+
+
+/* AJUSTANDO TABELAS */
+
+/* RESPONSIVIDADE PARA TABELAS */
+
+.container-listausuarios {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.lista{
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f2b705;
+    border-collapse: collapse;
+    height: auto;
+    
+}
+
+td, tr, th{
+    padding: 20px;
+    width: auto;
+    color: #260101;
+    border: #260101 1px solid;
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 600px){
+    
+
+    .container-listausuarios {
+        display: flex;
+        flex-flow: row;
+        justify-content: start;
+        
+
+    }
+    /* RESPONSIVIDADE VIOLENTA */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 16px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        /* background: black; */
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        /* background-color: #ddd; */
+        color: white
+      }
+      
+      .active {
+        color: white;
+      }
+    
+    
+}
