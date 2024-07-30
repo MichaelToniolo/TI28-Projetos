@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
         echo"<script>window.location.href='backoffice.php';</script>";
     }
     else{
-        // echo"<script>window.alert('USUARIO OU SENHA INCORRETOS');</script>";
+        echo"<script>window.alert('USUARIO OU SENHA INCORRETOS');</script>";
     }
 
 }

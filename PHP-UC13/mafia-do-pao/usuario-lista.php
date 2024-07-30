@@ -46,8 +46,7 @@ $status = '1';
                     <td><?=$tbl[0]?></td> <!-- COLETA O NOME DO USUARIO-->
                     <td><?=$tbl[1]?></td> <!-- COLETA O EMAIL DO USUARIO-->
                     <td><?=$tbl[2]?></td> <!-- COLETA O STATUS DO USUARIO-->
-                    <td><a href="usuario-altera.php?id=<?=$tbl[3]?>">
-                            <input type="button" value="ALTERAR">
+                    <td><a href="usuario-altera.php?id=<?=$tbl[3]?>"><input type="button" value="ALTERAR">
                         </a>
                     </td>
                  </tr>
