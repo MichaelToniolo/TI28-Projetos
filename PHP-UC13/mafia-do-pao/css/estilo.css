@@ -1,11 +1,12 @@
 body{
-    background-color: #d97904;
+    background-color: #1c3156;
 }
 
 /* CONTAINER GLOBAL */
 .container-global{
     display: flex;
     justify-content: center;
+    background-color: #1c3156;
 
 }
 
@@ -43,7 +44,7 @@ body{
 .topo{
     display: flex;
     justify-content: space-between;
-    background-color: #730202;
+    background-color: #3670a8;
     height: 50px;
     width: auto;
     border-radius: 20px;
@@ -51,6 +52,7 @@ body{
 }
 
 .topo label{
+    margin-top: 8px;
     font-size: 30px;
     color: #ffffff;
 }
@@ -73,7 +75,7 @@ body{
 }
 
 .menu a{
-    background-color: #7e1010;
+    background-color: #0092ba;
     width: 300px;
     height: 300px;
     margin: 30px 30px 30px 30px;
@@ -84,9 +86,19 @@ body{
     justify-content: center;
     align-items: center;
     color: black;
+    transition: transform .2s;
 }
 
+.menu a:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+
+
+
 .menu img{
+    margin-bottom: 30px;
     border-radius: 20px;
 }
 
@@ -94,7 +106,7 @@ body{
   .menu .tooltiptext {
     margin-top: 260px ;
     width: 200px;
-    background-color: rgba(255, 255, 255, 0.473);
+    background-color: #fff;
     color: #020202;
     font-size: medium;
     text-align: center;
@@ -109,6 +121,7 @@ body{
 
 /* AJUSTANDO TABELAS */
 .container-listausuarios {
+    margin-top: 60px;
     display: flex;
     flex-flow: column;
     align-content: center;
@@ -117,16 +130,25 @@ body{
 }
 
 .lista{
-    background-color: rgb(47, 34, 21);
-    border-radius: 20px;
+    background-color: #0092ba;
+    padding: 20px;
+    border-radius: 10px;
     border-collapse: collapse;
     width: 100%;
     height: auto;
     
 }
 td, tr, th{
-
-    color: whitesmoke;
-    border: whitesmoke 1px solid;
-    font-size: 20px;
+    color: #ffffff;
+    border: #fff 2px solid;
+    font-size: 25px;
 }
+
+.btnsair{
+    transition: transform .2s;
+}
+.btnsair a:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
