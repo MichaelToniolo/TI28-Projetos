@@ -1,6 +1,7 @@
 <?php
 include("conectadb.php");
-// include("header.php");
+include('topo.php');
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $login = $_POST['txtlogin'];
@@ -40,7 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <title>CADASTRO DE USUARIO</title>
 </head>
 <body>
-<a href="backoffice.php"><img src="icons/Navigation-left-01-256.png" width="25" height="25"></a>
 
     <div class="container-global">
         

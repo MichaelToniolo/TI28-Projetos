@@ -1,5 +1,6 @@
 <?php
 include('conectadb.php');
+include('topo.php');
 
 // COLETA O VALOR id LÁ DA URL
 $id = $_GET['id'];
@@ -48,9 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <div class="container-global">
-        <!-- BOTÃO DE VOLTAR -->
-        <a href="usuario-lista.php"><img src="icons/Navigation-left-01-256.png" width="25" height="25"></a>
-
+        
     <form class="formulario" action="usuario-altera.php" method="post">
                 <input type="hidden" name="id" value="<?= $id?>">
 
@@ -65,8 +64,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <br>
 
                 <!-- SELETOR DE ATIVO E INATIVO -->
-                <input type="radio" name="status" value="1" <?= $status == '1'?"checked" : ""?>>ATIVO
-                <input type="radio" name="status" value="0" <?= $status == '0'?"checked" : ""?>>INATIVO
+                 <div class="bullets">
+                    <input type="radio" name="status" value="1" <?= $status == '1'?"checked" : ""?>>ATIVO
+
+                    <input type="radio" name="status" value="0" <?= $status == '0'?"checked" : ""?>>INATIVO
+                </div>
                 <br>
                 <br>
                 <input type="submit" value="CONFIRMAR">
