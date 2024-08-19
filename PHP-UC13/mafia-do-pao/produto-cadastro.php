@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         $sql = "INSERT INTO 
         tb_produtos(pro_nome, pro_quantidade, pro_unidade, pro_preco, pro_status, pro_imagem)
         VALUES ('$nomeproduto', $quantidade, '$unidade', $preco, '1', '$imagem_base64')";
+        // echo $imagem_base64;
         $retorno = mysqli_query($link, $sql); #CRÉDITOS PARA RAFAEL BARBOSA GÊNIO E HUMILDE
 
         echo"<script>window.alert('PRODUTO CADASTRADO');</script>";
@@ -52,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
 </head>
 <body>
     <div class="container-global">
-        <form class="formulario" action="produto-cadastro.php" method="post">
+        <form class="formulario" action="produto-cadastro.php" method="post" enctype="multipart/form-data">
             <label>NOME PRODUTO</label>
             <input type="text" name="txtnome" placeholder="DIGITE NOME PRODUTO" required>
             <br>

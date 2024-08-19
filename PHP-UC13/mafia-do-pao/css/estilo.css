@@ -129,7 +129,7 @@ body{
 
 
 /* AJUSTANDO TABELAS */
-.container-listausuarios, .container-listacliente{
+.container-listausuarios, .container-listacliente,  .container-listaproduto {
     display: flex;
     flex-flow: column;
     align-content: center;
@@ -170,7 +170,7 @@ td, tr, th{
   /* CENTRALIZANDO RADIO BUTTONS NAS LISTAS */
 
   /* LISTA CLIENTE RADIOS */
-.container-listacliente, .container-listausuarios form{
+.container-listacliente, .container-listausuarios,  form{
     margin-top: 5px;
     display: flex;
     justify-content: center;
@@ -180,4 +180,9 @@ td, tr, th{
     border-radius: 20px;
     padding: 10px;
     
+}
+
+.container-listaproduto img{
+    border-radius: 10px;
+
 }
