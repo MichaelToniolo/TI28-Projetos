@@ -15,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $retorno = mysqli_query($link, $sql);
     $contagem = mysqli_fetch_array($retorno) [0];
 
+    echo $contagem;
     // VERIFICA SE NATAN EXISTE
     if($contagem == 0){
         $sql = "INSERT INTO tb_usuarios(usu_login, usu_senha, usu_email, usu_status)

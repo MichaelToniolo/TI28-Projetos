@@ -17,7 +17,7 @@ body{
     flex-flow: column;
     padding: 30px 3% 30px 30px;
     width: 300px;
-    height: 300px;
+    height: auto;
     background-color: #730202;
     border-radius: 20px;
     color: aliceblue;
@@ -170,7 +170,7 @@ td, tr, th{
   /* CENTRALIZANDO RADIO BUTTONS NAS LISTAS */
 
   /* LISTA CLIENTE RADIOS */
-.container-listacliente, .container-listausuarios,  form{
+.container-listacliente form, .container-listaproduto form, .container-listausuarios form{
     margin-top: 5px;
     display: flex;
     justify-content: center;

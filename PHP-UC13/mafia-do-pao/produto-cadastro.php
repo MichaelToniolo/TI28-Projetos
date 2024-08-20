@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
             <br>
             
             <label>QUANTIDADE</label>
-            <input type="decimal" name="txtqtd" placeholder="DIGITE QUANTIDADE" required>
+            <input type="number" name="txtqtd" placeholder="DIGITE QUANTIDADE" required>
             <br>
 
             <label>UNIDADE</label>
@@ -76,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
             <br>
             <label>IBAGEM</label>
             <input type="file" name='imagem' id='imagem'>
-
+            <br>
             <br>
             <input type="submit" value="CADASTRAR PRODUTO">
         </form>
