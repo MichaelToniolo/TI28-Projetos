@@ -46,6 +46,8 @@ CREATE TABLE tb_venda(
     fk_usu_id INT NOT NULL
 );
 
+
+ALTER TABLE tb_item_venda ADD COLUMN iv_status char(1) NOT NULL;
 ALTER TABLE tb_item_venda ADD CONSTRAINT iv_pro_id FOREIGN KEY (fk_pro_id) REFERENCES tb_produtos(pro_id);
 ALTER TABLE tb_venda ADD CONSTRAINT ven_cli_id FOREIGN KEY (fk_cli_id) REFERENCES tb_clientes(cli_id);
 ALTER TABLE tb_venda ADD CONSTRAINT ven_usu_id FOREIGN KEY (fk_usu_id) REFERENCES tb_usuarios(usu_id);
