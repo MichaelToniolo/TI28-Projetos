@@ -41,7 +41,7 @@ CREATE TABLE tb_venda(
     ven_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ven_datavenda DATETIME NOT NULL,
     ven_totalvenda DECIMAL(10,2) NOT NULL,
-    fk_iv_cod_iv VARCHAR(100) NOT NULL,= 
+    fk_iv_cod_iv VARCHAR(100) NOT NULL,
     fk_cli_id INT NOT NULL,
     fk_usu_id INT NOT NULL
 );
