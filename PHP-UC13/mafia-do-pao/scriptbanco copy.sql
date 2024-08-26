@@ -33,7 +33,7 @@ CREATE TABLE tb_item_venda(
     iv_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     iv_valortotal DECIMAL(10,2) NOT NULL,
     iv_quantidade DECIMAL (10,2) NOT NULL,
-    iv_cod_iv VARCHAR(100) NOT NULL,
+    iv_cod_iv VARCHAR(100) NOT NULL, 
     fk_pro_id INT NOT NULL
 );
 
@@ -41,11 +41,10 @@ CREATE TABLE tb_venda(
     ven_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ven_datavenda DATETIME NOT NULL,
     ven_totalvenda DECIMAL(10,2) NOT NULL,
-    fk_iv_cod_iv VARCHAR(100) NOT NULL,
+    fk_iv_cod_iv VARCHAR(100) NOT NULL,= 
     fk_cli_id INT NOT NULL,
     fk_usu_id INT NOT NULL
 );
-
 
 ALTER TABLE tb_item_venda ADD CONSTRAINT iv_pro_id FOREIGN KEY (fk_pro_id) REFERENCES tb_produtos(pro_id);
 ALTER TABLE tb_venda ADD CONSTRAINT ven_cli_id FOREIGN KEY (fk_cli_id) REFERENCES tb_clientes(cli_id);
