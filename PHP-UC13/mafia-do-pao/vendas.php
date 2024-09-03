@@ -110,7 +110,6 @@ $retorno = mysqli_query($link, $sqllistapro);
         </div> 
         <!-- TIRAR A DIV DE BAIO E FECHAR AQUI -->
                 <br>
-                <br>
         <div class="container-listaproduto">
             <table class="lista">
                 <tr>
@@ -146,14 +145,14 @@ $retorno = mysqli_query($link, $sqllistapro);
     
     <!-- FORMULARIO FINAL DE NOME E ENVIO -->
      <div class="container-global">
-        <form class="formulario" action="venda_finalizar.php" method = "POST">
+        <form class="formulario" action="vendas-finalizar.php" method = "post"> <!-- mudar o nome da pag php -->
 
             <label>SELECIONE O CLIENTE</label>
                     <select name='nomecliente'>
                         <!-- PUXAR OS NOMES DOS CLIENTES -->
                         <?php while ($tblcli = mysqli_fetch_array($retornocli)){
                         ?>
-                            <option value="<?$tblcli[0]?>">
+                            <option value="<?=$tblcli[0]?>">   <!--faltou o = dps do ?  -->
                             <?=strtoupper($tblcli[1])?>
                             </option>
                         <?php
