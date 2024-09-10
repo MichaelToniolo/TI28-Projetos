@@ -5,7 +5,8 @@ include ("topo.php");
 //COLETAR DADOS DO POST
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $idcliente = $_POST['nomecliente'];
+    $idcliente = ($_POST['nomecliente']);
+   
 
    // echo "id cliente >> ".$idcliente . "   <<<   ";
 

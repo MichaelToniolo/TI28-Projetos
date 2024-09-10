@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // VERIFICAR SE A IMAGEM QUE ESTÁ CHEGANDO É IGUAL QUE SERÁ GRAVADA
     if($imagem_atual == $imagem_base64){
         $sql = "UPDATE tb_produtos SET pro_nome = '$nomeproduto', pro_quantidade = $quantidade, 
-        pro_unidade = '$unidade', pro_preco = $preco, pro_status = '$status'";
+        pro_unidade = '$unidade', pro_preco = $preco, pro_status = '$status'WHERE pro_id = $id";
         mysqli_query($link, $sql);
 
         echo"<script>window.alert('PRODUTO ALTERADO');</script>";
@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     else{
         $sql = "UPDATE tb_produtos SET pro_nome = '$nomeproduto', pro_quantidade = $quantidade, 
         pro_unidade = '$unidade', pro_preco = $preco, pro_status = '$status',
-        pro_imagem = '$imagem_base64'";
+        pro_imagem = '$imagem_base64'WHERE pro_id = $id";
         mysqli_query($link, $sql);
 
         echo"<script>window.alert('PRODUTO ALTERADO');</script>";
