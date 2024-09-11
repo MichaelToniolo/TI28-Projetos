@@ -45,19 +45,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <title>CADASTRA PRODUTOS</title>
 </head>
+
 <body>
     <div class="container-global">
         <form class="formulario" action="produto-cadastro.php" method="post" enctype="multipart/form-data">
             <label>NOME PRODUTO</label>
             <input type="text" name="txtnome" placeholder="DIGITE NOME PRODUTO" required>
             <br>
-            
+
             <label>QUANTIDADE</label>
             <input type="number" name="txtqtd" placeholder="DIGITE QUANTIDADE" required>
             <br>
@@ -75,13 +77,39 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
             <input type="decimal" name="txtpreco" placeholder="DIGITE PREÇO" required>
             <br>
             <label>IBAGEM</label>
+
+            <!-- adicionado script em js para visualizar imagem ao subir -->
+            <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
             <input type="file" name='imagem' id='imagem'>
+
             <br>
-            <br>
+
+            <img id="ver-img" src="icons/box.png" alt="Imagem padrão" style="width: 200px; height: 200px;">
+            
+            <script>
+            $("#imagem").change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#ver-img').attr('src', e.target
+                        .result); // Substitui a imagem padrão pela nova imagem
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                } else {
+                    // Caso o usuário remova o arquivo ou não selecione um novo, restaura a imagem padrão
+                    $('#ver-img').attr('src', '"icons/box.png"');
+                }
+            });
+            </script>
+            <!-- fim do script -->
+
             <input type="submit" value="CADASTRAR PRODUTO">
         </form>
 
     </div>
-    
+
+
 </body>
+
 </html>
