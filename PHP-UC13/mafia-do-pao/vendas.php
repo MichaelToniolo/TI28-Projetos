@@ -13,6 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     list($idproduto, $nomeproduto, $valorproduto) = explode(',', $produto); 
     $qtditem = $_POST['qtditem'];
 
+    #VERIFICANDO SE TEM PRODUTO NO ESTOQUE
+    $sqlcontarproduto = "SELECT pro_quantidade FROM tb_produtos WHERE pro_id = $idproduto";
+    $retornocontagem = mysqli_query($link, $sqlcontarproduto);
+    while ($tblcontagem = mysqli_fetch_array($retornocontagem)){
+        $contagem = $tblcontagem[0];
+    }
+    if($qtditem > $contagem){
+        echo "<script>window.alert('QUANTIDADE INSUFICIENTE NO ESTOQUE. QTD ATUAL: $contagem')</script>";
+        echo "<script>window.location.href='vendas.php'</script>";
+    }else{
+
     //CALCULANDO VALOR ITENS
     $valorlista = $valorproduto * $_POST['qtditem'];
 
@@ -39,6 +50,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
             #SE CARRINHO EXISTE, CONSULTA O NUMERO DO CARRINHO PARA ADICIONAR MAIS ITENS NESSE CARRINHO
+           
+           //VERIFICAÇÃO DE ADICIONANDO MAIS ITENS, SE TEM NO ESTOQUE
+           $sqlcontarproduto2 = "SELECT SUM(iv_quantidade) FROM tb_item_venda WHERE
+           fk_pro_id = $idproduto AND iv_status = 1";
+           $retornopro = mysqli_query($link, $sqlcontarproduto2);
+           while ($tblpro = mysqli_fetch_array($retornopro)){
+                $proadd = $tblpro[0];
+           }
+           if (($proadd + $qtditem) > $contagem){
+            $contagem2 = ($contagem - $qtditem);
+            echo "<script>window.alert('QUANTIDADE INSUFICIENTE NO ESTOQUE. QTD ATUAL: $contagem2')</script>";
+            echo "<script>window.location.href='vendas.php'</script>";
+           }else{////        
+           
             $sql = "SELECT iv_cod_iv FROM tb_item_venda where iv_status = 1";
             $carrinhoaberto = mysqli_query($link, $sql);
 
@@ -49,9 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $sqlitem = "INSERT INTO tb_item_venda (iv_valortotal, iv_quantidade, iv_cod_iv, fk_pro_id, iv_status)
                     VALUES ($valorlista, $qtditem, '$codigo_itemvenda_ok', $idproduto, '1')";
                     mysqli_query($link, $sqlitem);
-
+           }/////
         }
     }
+}
 }
 
 
@@ -108,8 +134,9 @@ $retorno = mysqli_query($link, $sqllistapro);
             </select>
             <br>
             <label>QUANTIDADE</label>
-            <input type='decimal' name="qtditem">
-
+            <input type='number' name='qtditem' step="0.01" min="0"
+            required oninput="this.value.replace(/[^0-9]/g, '');">
+            <!-- impede que coloque numero <0 e caracteres sem ser numericos -->
             <br>
             <input type="submit" value="CONFIRMAR">
         </form>
