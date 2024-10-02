@@ -58,6 +58,7 @@ $retorno = mysqli_query($link, $sql);
         <br>
         <label>TIPO</label>
         <select name='tipo_desconto'>
+                <option value="<?=$tipo_desconto?>"><?= strtoupper($tipo_desconto)?></option>
                 <option value="porcentagem">Porcentagem</option>
                 <option value="fixo">Fixo</option>
         </select>

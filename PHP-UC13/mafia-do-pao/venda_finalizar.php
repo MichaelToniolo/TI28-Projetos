@@ -13,8 +13,7 @@ include("topo.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $idcliente = ($_POST['nomecliente']);
   $codigo = ($_POST['codigo']);
-  //echo $codigo;
-
+ 
   #PESQUISA O CUPOM
   $sqlcupom = "SELECT * FROM tb_cupons WHERE codigo = '$codigo'";
   $retornocupom = mysqli_query($link, $sqlcupom);
@@ -40,18 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
 #ADD CUPOM
-
-
   if (strtotime($data_validade) >= strtotime($data_atual)) {
-
     //verifica se o cupom já foi usado pelo cliete
     $sqlclientecupom = "SELECT COUNT(fk_cli_id) FROM tb_venda WHERE cupom = '$desconto'";
     $retornoclientecupom = mysqli_query($link, $sqlclientecupom);
     while ($tblclientecupom = mysqli_fetch_array($retornoclientecupom)) {
         $clientecupom = $tblclientecupom[0];
     }
-    //echo $clientecupom .'----------'.$idcliente;
-
     if ($clientecupom < 1 and $idcliente != 1 ){ //idcliente 1 = vazio
       echo 'cliente ok';
         //verifica o tipo de desconto
@@ -105,7 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = date("Y-m-d H:i:s"); #pegando o dia atual
 
 
-  $sqlvenda = "INSERT INTO tb_venda (ven_datavenda, ven_totalvenda, fk_iv_cod_iv, `fk_cli_id`, `fk_usu_id`, cupom) 
+  $sqlvenda = "INSERT INTO tb_venda (ven_datavenda, ven_totalvenda, fk_iv_cod_iv, 
+  `fk_cli_id`, `fk_usu_id`, cupom) 
   VALUES ('$data',$total,'$tbl[3]',$idcliente,$usuario, '$codigo')";
   echo $sqlvenda;
   mysqli_query($link,$sqlvenda);

@@ -7,6 +7,13 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     $login = $_POST['txtlogin'];
     $senha = $_POST['txtsenha'];
 
+    //VERIFICAÇÃO DO MD5(TEMPERO)
+    $sqltempero = "SELECT tempero FROM tb_usuarios
+    WHERE usu_login = '$login' AND usu_status = '1'";
+    $retornotempero = mysqli_query($link, $sqltempero);
+    $tempero = mysqli_fetch_array($retornotempero)[0];
+    $senha = md5($tempero . $senha); //criptogra a senha;
+
     // COMEÇA VALIDAR BANCO DE DADOS
     $sql = "SELECT COUNT(usu_id) FROM tb_usuarios
     WHERE usu_login = '$login' AND usu_senha = '$senha' AND
@@ -59,6 +66,8 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
                 <br>
                 <br>
                 <input type="submit" value="ACESSAR">
+                <br>
+                <a href="recuperasenha.php"> ESQUECI MINHA SENHA </a>
         </form>
 
     </div>

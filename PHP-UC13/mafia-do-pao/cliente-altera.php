@@ -22,7 +22,6 @@ $retorno = mysqli_query($link, $sql);
         $email = $_POST['txtemail'];
         $cel = $_POST['txtcel'];
         $status = $_POST['status'];
-
         $sql = "UPDATE tb_clientes SET cli_nome = '$nome', cli_email = '$email', cli_cel = '$cel', cli_status = '$status' WHERE cli_id = $id";
         mysqli_query($link, $sql);
         echo"<script>window.alert('USUARIO ALTERADO COM SUCESSO!');</script>";

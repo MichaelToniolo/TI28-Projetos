@@ -13,3 +13,6 @@ $senha = "";
 
 // LINK QUE A FERRAMENTA VAI USAR PARA CONECTAR NO BANCO
 $link = mysqli_connect($servidor, $usuario, $senha, $banco);
+
+//DEFINE HORARIO PARA O MESMO DE SP
+date_default_timezone_set('America/Sao_Paulo');
