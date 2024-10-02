@@ -30,15 +30,19 @@
             para redefinir sua senha. ";
             $mail = new PHPMailer(true);
             try{
+                ####
+                #CRIE UM EMAIL NO SAPO.PT:https://www.sapo.pt/  OUTROS EMAILS ESTÃO BLOQUEANDO O ENVIO
+                #PODESER QUE O ENVIO DE EMAIL CAIA NO SPAM    
+                ####
                 $mail->SMTPDebug = 0;
                 $mail->isSMTP();
-                $mail->Host = 'smtp-relay.brevo.com'; //usando o serviço SMTP da brevo
+                $mail->Host = 'smtp.sapo.pt'; //usando o serviço SMTP da brevo
                 $mail->SMTPAuth = true;
-                $mail->Username = '7d200a001@smtp-brevo.com'; //coloque seu email  real
-                $mail->Password = 'NIOMRs3vA1wjGWzf'; //coloque sua senha de email real
+                $mail->Username = 'email@sapo.pt'; //coloque seu email  real
+                $mail->Password = 'senha'; //coloque sua senha de email real
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587; //Porta usada pelo serviço SMTP
-                $mail->setFrom('7d200a001@smtp-brevo.com', 'EMAIL REC');
+                $mail->setFrom('email@sapo.pt', 'EMAIL REC');
                 $mail->addAddress($to);
                 $mail->isHTML(true);
                 $mail->Subject = $subject;
